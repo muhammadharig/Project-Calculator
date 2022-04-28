@@ -23,3 +23,16 @@ function clearCalculator() {
 function inputDigit(digit) {
   calculator.displayNumber += digit;
 }
+
+// button
+const buttons = document.querySelectorAll(".button");
+
+for (let button of buttons) {
+  button.addEventListener("click", function (event) {
+    // mendapatakan objek element yang diklik
+    const target = event.target;
+
+    inputDigit(target.innerHTML);
+    updateDisplay();
+  });
+}
