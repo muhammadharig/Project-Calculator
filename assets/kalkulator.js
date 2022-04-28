@@ -21,7 +21,11 @@ function clearCalculator() {
 
 // membuat fungsi input digit
 function inputDigit(digit) {
-  calculator.displayNumber += digit;
+  if (calculator.displayNumber === "0") {
+    calculator.displayNumber = digit;
+  } else {
+    calculator.displayNumber += digit;
+  }
 }
 
 // button
