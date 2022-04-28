@@ -18,3 +18,8 @@ function clearCalculator() {
   calculator.firstNumber = null;
   calculator.waitingForSecondNumber = false;
 }
+
+// membuat fungsi input digit
+function inputDigit(digit) {
+  calculator.displayNumber += digit;
+}
